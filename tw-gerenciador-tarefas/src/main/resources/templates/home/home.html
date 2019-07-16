@@ -1,10 +1,28 @@
 <!DOCTYPE html>
-<html xmlns:th="http://www.thymeleaf.org">
+<html xmlns:th="http://www.thymeleaf.org" xmlns="http://www.w3.org/1999/html">
 <head>
     <meta charset="UTF-8">
-    <title>Gerenciador de Tarefas - página inicial</title>
-</head>
+    <title> Gerenciador de Tarefas - página inicial</title>
+    <link rel="stylesheet" href="/webjars/bootstrap/css/bootstrap.min.css/">
+    </head>
 <body>
-    <p>Olá seja bem vindo ao Gerenciador de Tarefas!</p>
+    <nav class="navbar navbar-light bg-light">
+        <a class="navbar-brand" href="#">Gerenciador de Tarefas</a>
+        <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbar-app">
+            <span class="navbar-toggler-icon"></span>
+        </button>
+        <div class="navbar nav-collapse" id="navbar-app">
+            <div class="navbar-nav">
+                <a class="nav-item nav-link nav-collapse nav-justified" href="/">Home</a>
+            </div>
+        </div>
+    </nav>
+    <div class="container">
+        <p>Olá seja bem vindo ao Gerenciador de Tarefas!</p>
+        <p th:text="${mensagem}"></p>
+    </div>
+
+    <script src="/webjars/jquery/3.4.1/jquery.min.js"></script>
+    <script src="/webjars/bootstrap/js/bootstrap.min.js"></script>
 </body>
 </html>
